@@ -1,4 +1,12 @@
 import React, { Component } from 'react';
+import Home from './containers/Home';
+import Test from './containers/Test';
+import {
+  Router,
+  Route,
+  Redirect,
+  browserHistory
+} from 'react-router';
 
 export default class App extends Component {
 
@@ -12,9 +20,10 @@ export default class App extends Component {
 
   render() {
     return (
-      <div>
-        test
-      </div>
+      <Router history={browserHistory}>
+        <Router path='/' component={Home} />
+        <Router path='/test' component={Test} />
+      </Router>
       )
   }
 }
