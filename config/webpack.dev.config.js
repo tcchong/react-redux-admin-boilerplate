@@ -6,10 +6,14 @@ module.exports = {
     'admin': './index.js'
   },
   output: {
-    path: './server/public/dist',
+    path: './server/public/dist/js',
     filename: '[name].bundle.js',
   },
   resolve: {
+    modulesDirectories: [
+      'src',
+      'node_modules'
+    ],
     extensions: ['', '.js']
   },
   module: {
