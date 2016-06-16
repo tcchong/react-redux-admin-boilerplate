@@ -1,6 +1,6 @@
 import React from 'react';
 
-let ContentHeader = ({children}) => {
+let Content = ({children}) => {
   return(
     <section className="content">
       {children}
@@ -8,4 +8,4 @@ let ContentHeader = ({children}) => {
     )
 }
 
-export default ContentHeader;
+export default Content;

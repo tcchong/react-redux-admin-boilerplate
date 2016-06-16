@@ -1,15 +1,14 @@
 import React from 'react';
 
-let ContentHeader = () => {
+let ContentHeader = ({title, parent}) => {
   return(
     <section className="content-header">
       <h1>
-        Dashboard
-        <small>Control panel</small>
+        {title}
       </h1>
       <ol className="breadcrumb">
-        <li><a href="#"><i className="fa fa-dashboard"></i> Home</a></li>
-        <li className="active">Dashboard</li>
+        <li><a href="#"><i className="fa fa-dashboard"></i> {parent}</a></li>
+        <li className="active">{title}</li>
       </ol>
     </section>
     )
