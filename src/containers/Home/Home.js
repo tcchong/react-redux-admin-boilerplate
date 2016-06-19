@@ -16,7 +16,7 @@ export default class Home extends ContentView {
         <div className="col-md-12">
           <Box type="info">
             <BoxBody>
-              Home
+              Welcome to React Admin Boilerplate
             </BoxBody>
           </Box>
         </div>

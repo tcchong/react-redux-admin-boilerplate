@@ -8,25 +8,20 @@ import Footer from 'components/Footer/Footer';
 let sidebarList = [
   {
     id: 1,
-    name: 'IAM',
-    path: 'iam',
-    icon: 'users',
+    name: 'CRUD',
+    path: 'crud',
+    icon: 'database',
     child: [
       {
         id: 2,
-        name: 'Users',
-        path: 'users',
-      },
-      {
-        id: 3,
-        name: 'Roles',
-        path: 'roles',
+        name: 'Simple List',
+        path: 'simple-list',
       }
     ]
-  },
+  }
 ];
 
-export default class Dashboard extends React.Component {
+export default class App extends React.Component {
 
   render() {
     return (
@@ -39,8 +34,6 @@ export default class Dashboard extends React.Component {
         <LeftSidebar list={sidebarList} />
 
         {this.props.children}
-
-        <Footer />
 
         <div className="control-sidebar-bg"></div>
       </div>

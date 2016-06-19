@@ -7,6 +7,11 @@ let LeftSidebar = ({list}) => {
       <section className="sidebar">
         <ul className="sidebar-menu">
           <li className="header">MAIN NAVIGATION</li>
+          <li>
+            <Link to="/">
+              <i className="fa fa-th"></i> <span>Overview</span>
+            </Link>
+          </li>
           {
             list.map((parent) =>
               <li className="treeview" key={parent.id}>
@@ -22,7 +27,7 @@ let LeftSidebar = ({list}) => {
                           <Link to={`${parent.path}/${child.path}`}>
                             <i className="fa fa-circle-o"></i>
                             {child.name}
-                          </Link>      
+                          </Link>
                         </li>
                       )
                   }

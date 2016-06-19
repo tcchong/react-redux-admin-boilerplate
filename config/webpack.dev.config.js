@@ -1,4 +1,7 @@
 var path = require('path');
+var webpack = require('webpack');
+
+var babelLoaderQueryString = 'presets[]=react,presets[]=es2015,presets[]=stage-1,plugins[]=transform-decorators-legacy';
 
 module.exports = {
   context: path.resolve(__dirname, '../src'),
@@ -20,13 +23,22 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/,
-        query: {
-          presets: ['react', 'es2015']
-        }
+        loaders: ['babel-loader?' + babelLoaderQueryString],
+        exclude: /node_modules/
       }
     ]
-  }
+  },
+  // polyfill for fetch
+  plugins: [
+    new webpack.ProvidePlugin({
+      'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
+    }),
+
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('development')
+      }
+    }),
+  ]
 
 };

@@ -1,8 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import { Provider } from 'react-redux';
+import configureStore from 'redux/configureStore';
+import configureApp from './routes';
 
-var path = window.PARSE_DASHBOARD_PATH || '/';
+const store = configureStore();
+const App = configureApp(store);
+
 ReactDOM.render(
-  <App path={path} />, document.getElementById('browser_mount')
+  <Provider store={store}>
+    {App}
+  </Provider>,
+  document.getElementById('app')
   );
