@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import ContentView from 'containers/ContentView';
 import { listItem, removeItem } from 'redux/actions/item';
@@ -7,7 +6,6 @@ import {
   Box,
   BoxHeader,
   BoxBody,
-  BoxFooter,
   Table,
   TableBody,
   LinkBtn,
@@ -32,7 +30,7 @@ export default class SimpleListView extends ContentView {
     removeItem: PropTypes.func
   }
 
-  constructor(props) {
+  constructor() {
     super();
 
     this.renderContent = this.renderContent.bind(this);
@@ -88,11 +86,8 @@ export default class SimpleListView extends ContentView {
             </TableBody>
           </Table>
         </BoxBody>
-        <BoxFooter>
-          
-        </BoxFooter>
       </Box>
-      )
+      );
   }
 
 }

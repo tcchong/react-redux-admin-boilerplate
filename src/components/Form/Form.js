@@ -11,12 +11,6 @@ const [
 ];
 
 export default class Form extends React.Component {
-
-  static propTypes = {
-    fieldTypes: PropTypes.object.isRequired,
-    initialValues: PropTypes.object
-  }
-
   constructor() {
     super();
 
@@ -40,12 +34,12 @@ export default class Form extends React.Component {
     let input;
     if (TYPE_TEXT.indexOf(type) > -1) {
       input =
-        <input
+        (<input
           ref={key}
           className="form-control"
           disabled={disabled}
           type={type}
-          defaultValue={value} />;
+          defaultValue={value} />);
     } else if (type === TYPE_SELECT) {
       input = <select></select>;
     } else if (type === TYPE_RADIO) {
@@ -56,7 +50,7 @@ export default class Form extends React.Component {
         <label>{key.toUpperCase()}</label>
         {input}
       </div>
-      )
+      );
   }
 
   render() {
@@ -65,10 +59,15 @@ export default class Form extends React.Component {
     } = this.props;
     return (
       <form className="form">
-        { 
-          Object.keys(fieldTypes).map((key) => this.renderInput(key) )
+        {
+          Object.keys(fieldTypes).map((key) => this.renderInput(key))
         }
       </form>
-      )
+      );
   }
 }
+
+Form.propTypes = {
+  fieldTypes: PropTypes.object.isRequired,
+  initialValues: PropTypes.object
+};

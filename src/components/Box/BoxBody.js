@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
-let BoxBody = ({children}) => {
-  return(
-    <div className="box-body">
-      {children}
-    </div>
-    )
-}
+const BoxBody = ({ children }) => (
+  <div className="box-body">
+    {children}
+  </div>
+);
 
 export default BoxBody;
+
+BoxBody.propTypes = {
+  children: PropTypes.node
+};

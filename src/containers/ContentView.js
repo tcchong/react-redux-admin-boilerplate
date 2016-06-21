@@ -14,13 +14,13 @@ export default class ContentView extends React.Component {
     return (
       <ContentWrapper>
         {
-          title && parent && <ContentHeader title={title} parent={parent} />  
+          title && parent && <ContentHeader title={title} parent={parent} />
         }
         <Content>
           {this.renderContent()}
         </Content>
       </ContentWrapper>
-    )
+    );
   }
 
 }

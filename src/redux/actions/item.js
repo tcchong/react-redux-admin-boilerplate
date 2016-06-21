@@ -15,7 +15,7 @@ export function listItem() {
       method: 'GET',
       url: 'sample_list'
     }
-  }
+  };
 }
 
 export function getItem(id) {
@@ -25,7 +25,7 @@ export function getItem(id) {
       method: 'GET',
       url: `sample_list/${id}`
     }
-  }
+  };
 }
 
 export function createItem(item) {
@@ -36,7 +36,7 @@ export function createItem(item) {
       url: 'sample_list',
       data: item
     }
-  }
+  };
 }
 
 export function updateItem(id, item) {
@@ -47,7 +47,7 @@ export function updateItem(id, item) {
       url: `sample_list/${id}`,
       data: item
     }
-  }
+  };
 }
 
 export function removeItem(id) {
@@ -57,5 +57,5 @@ export function removeItem(id) {
       method: 'DELETE',
       url: `sample_list/${id}`
     }
-  }
+  };
 }

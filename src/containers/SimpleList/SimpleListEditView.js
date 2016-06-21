@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import { Link } from 'react-router';
 import { push } from 'react-router-redux';
 import { connect } from 'react-redux';
 import ContentView from 'containers/ContentView';
@@ -72,7 +71,7 @@ export default class SimpleListEditView extends ContentView {
       name: this._getValue(formRefs.name),
       price: this._getValue(formRefs.price),
     };
-    
+
     if (isNew) {
       this.props.createItem(Object.assign({ id }, data));
     } else {
@@ -102,15 +101,16 @@ export default class SimpleListEditView extends ContentView {
             fieldTypes={this.state.fieldTypes} />
         </div>
       </div>
-      )
+      );
   }
 
   _generateRandomHash(length) {
-    let text = "";
-    const possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    let text = '';
+    const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
-    for (let i = 0; i < length; i++)
+    for (let i = 0; i < length; i++) {
       text += possible.charAt(Math.floor(Math.random() * possible.length));
+    }
 
     return text;
   }

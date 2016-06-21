@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
-let Content = ({children}) => {
-  return(
-    <section className="content">
-      {children}
-    </section>
-    )
-}
+const Content = ({ children }) => (
+  <section className="content">
+    {children}
+  </section>
+);
 
 export default Content;
+
+Content.propTypes = {
+  children: PropTypes.node
+};

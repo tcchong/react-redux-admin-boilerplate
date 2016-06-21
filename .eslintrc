@@ -3,5 +3,15 @@
   "rules": {
     "import/no-unresolved": 0,
     "comma-dangle": 0,
-  }
+    "no-underscore-dangle": 0,
+    "react/prop-types": [2, { ignore: ["children"] }],
+    "react/jsx-closing-bracket-location": [0, "props-aligned"],
+    "new-cap": [2, {
+      "capIsNewExceptions": ["List", "Map"]
+    }]
+  },
+  "plugins": [
+    "react"
+  ],
+  "parser": "babel-eslint"
 }

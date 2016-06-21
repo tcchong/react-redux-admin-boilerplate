@@ -36412,7 +36412,7 @@
 	        var fetchOptions = {
 	          method: method,
 	          headers: {
-	            'Accept': 'application/json',
+	            Accept: 'application/json',
 	            'Content-Type': 'application/json'
 	          }
 	        };
@@ -36485,22 +36485,21 @@
 
 	var _App2 = _interopRequireDefault(_App);
 
-	var _Home = __webpack_require__(319);
+	var _Home = __webpack_require__(318);
 
 	var _Home2 = _interopRequireDefault(_Home);
 
-	var _SimpleListView = __webpack_require__(326);
+	var _SimpleListView = __webpack_require__(325);
 
 	var _SimpleListView2 = _interopRequireDefault(_SimpleListView);
 
-	var _SimpleListEditView = __webpack_require__(338);
+	var _SimpleListEditView = __webpack_require__(337);
 
 	var _SimpleListEditView2 = _interopRequireDefault(_SimpleListEditView);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = function (store) {
-
 	  var history = (0, _reactRouterRedux.syncHistoryWithStore)(_reactRouter.browserHistory, store);
 
 	  return _react2.default.createElement(
@@ -36553,6 +36552,8 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	// eslint-disable-next-line react/prefer-stateless-function
 
 	var Login = function (_React$Component) {
 	  _inherits(Login, _React$Component);
@@ -36714,10 +36715,6 @@
 
 	var _LeftSidebar2 = _interopRequireDefault(_LeftSidebar);
 
-	var _Footer = __webpack_require__(318);
-
-	var _Footer2 = _interopRequireDefault(_Footer);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -36737,6 +36734,8 @@
 	    path: 'simple-list'
 	  }]
 	}];
+
+	// eslint-disable-next-line react/prefer-stateless-function
 
 	var App = function (_React$Component) {
 	  _inherits(App, _React$Component);
@@ -36789,7 +36788,6 @@
 
 	var AppHeaderContainer = function AppHeaderContainer(_ref) {
 	  var children = _ref.children;
-
 	  return _react2.default.createElement(
 	    "div",
 	    { className: "main-header" },
@@ -36798,6 +36796,11 @@
 	};
 
 	exports.default = AppHeaderContainer;
+
+
+	AppHeaderContainer.propTypes = {
+	  children: _react.PropTypes.node
+	};
 
 /***/ },
 /* 315 */
@@ -36862,7 +36865,6 @@
 
 	var Navbar = function Navbar(_ref) {
 	  var children = _ref.children;
-
 	  return _react2.default.createElement(
 	    "nav",
 	    { className: "navbar navbar-static-top" },
@@ -36880,6 +36882,11 @@
 	};
 
 	exports.default = Navbar;
+
+
+	Navbar.propTypes = {
+	  children: _react.PropTypes.node
+	};
 
 /***/ },
 /* 317 */
@@ -36901,7 +36908,6 @@
 
 	var LeftSidebar = function LeftSidebar(_ref) {
 	  var list = _ref.list;
-
 	  return _react2.default.createElement(
 	    'div',
 	    { className: 'main-sidebar' },
@@ -36971,38 +36977,13 @@
 
 	exports.default = LeftSidebar;
 
-/***/ },
-/* 318 */
-/***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var Footer = function Footer() {
-	  return _react2.default.createElement(
-	    "footer",
-	    { className: "main-footer" },
-	    _react2.default.createElement(
-	      "strong",
-	      null,
-	      "Copyright © 2016"
-	    )
-	  );
+	LeftSidebar.propTypes = {
+	  list: _react.PropTypes.array.isRequired
 	};
 
-	exports.default = Footer;
-
 /***/ },
-/* 319 */
+/* 318 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37018,15 +36999,15 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _ContentView2 = __webpack_require__(320);
+	var _ContentView2 = __webpack_require__(319);
 
 	var _ContentView3 = _interopRequireDefault(_ContentView2);
 
-	var _Box = __webpack_require__(324);
+	var _Box = __webpack_require__(323);
 
 	var _Box2 = _interopRequireDefault(_Box);
 
-	var _BoxBody = __webpack_require__(325);
+	var _BoxBody = __webpack_require__(324);
 
 	var _BoxBody2 = _interopRequireDefault(_BoxBody);
 
@@ -37079,7 +37060,7 @@
 	exports.default = Home;
 
 /***/ },
-/* 320 */
+/* 319 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37095,15 +37076,15 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _ContentWrapper = __webpack_require__(321);
+	var _ContentWrapper = __webpack_require__(320);
 
 	var _ContentWrapper2 = _interopRequireDefault(_ContentWrapper);
 
-	var _ContentHeader = __webpack_require__(322);
+	var _ContentHeader = __webpack_require__(321);
 
 	var _ContentHeader2 = _interopRequireDefault(_ContentHeader);
 
-	var _Content = __webpack_require__(323);
+	var _Content = __webpack_require__(322);
 
 	var _Content2 = _interopRequireDefault(_Content);
 
@@ -37151,7 +37132,7 @@
 	exports.default = ContentView;
 
 /***/ },
-/* 321 */
+/* 320 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -37168,7 +37149,6 @@
 
 	var ContentWrapper = function ContentWrapper(_ref) {
 	  var children = _ref.children;
-
 	  return _react2.default.createElement(
 	    "div",
 	    { className: "content-wrapper" },
@@ -37178,8 +37158,13 @@
 
 	exports.default = ContentWrapper;
 
+
+	ContentWrapper.propTypes = {
+	  children: _react.PropTypes.node
+	};
+
 /***/ },
-/* 322 */
+/* 321 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -37197,7 +37182,6 @@
 	var ContentHeader = function ContentHeader(_ref) {
 	  var title = _ref.title;
 	  var parent = _ref.parent;
-
 	  return _react2.default.createElement(
 	    "section",
 	    { className: "content-header" },
@@ -37231,8 +37215,14 @@
 
 	exports.default = ContentHeader;
 
+
+	ContentHeader.propTypes = {
+	  title: _react.PropTypes.string.isRequired,
+	  parent: _react.PropTypes.string.isRequired
+	};
+
 /***/ },
-/* 323 */
+/* 322 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -37249,7 +37239,6 @@
 
 	var Content = function Content(_ref) {
 	  var children = _ref.children;
-
 	  return _react2.default.createElement(
 	    "section",
 	    { className: "content" },
@@ -37259,8 +37248,13 @@
 
 	exports.default = Content;
 
+
+	Content.propTypes = {
+	  children: _react.PropTypes.node
+	};
+
 /***/ },
-/* 324 */
+/* 323 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -37279,7 +37273,6 @@
 	  var children = _ref.children;
 	  var type = _ref.type;
 	  var loading = _ref.loading;
-
 	  return _react2.default.createElement(
 	    "div",
 	    { className: "box box-" + type },
@@ -37294,8 +37287,15 @@
 
 	exports.default = Box;
 
+
+	Box.propTypes = {
+	  children: _react.PropTypes.node,
+	  type: _react.PropTypes.string.isRequired,
+	  loading: _react.PropTypes.bool
+	};
+
 /***/ },
-/* 325 */
+/* 324 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -37312,7 +37312,6 @@
 
 	var BoxBody = function BoxBody(_ref) {
 	  var children = _ref.children;
-
 	  return _react2.default.createElement(
 	    "div",
 	    { className: "box-body" },
@@ -37322,8 +37321,13 @@
 
 	exports.default = BoxBody;
 
+
+	BoxBody.propTypes = {
+	  children: _react.PropTypes.node
+	};
+
 /***/ },
-/* 326 */
+/* 325 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37341,17 +37345,15 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(193);
-
 	var _reactRedux = __webpack_require__(167);
 
-	var _ContentView2 = __webpack_require__(320);
+	var _ContentView2 = __webpack_require__(319);
 
 	var _ContentView3 = _interopRequireDefault(_ContentView2);
 
-	var _item = __webpack_require__(327);
+	var _item = __webpack_require__(326);
 
-	var _components = __webpack_require__(328);
+	var _components = __webpack_require__(327);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -37373,7 +37375,7 @@
 	}), _dec(_class = (_temp = _class2 = function (_ContentView) {
 	  _inherits(SimpleListView, _ContentView);
 
-	  function SimpleListView(props) {
+	  function SimpleListView() {
 	    _classCallCheck(this, SimpleListView);
 
 	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(SimpleListView).call(this));
@@ -37469,8 +37471,7 @@
 	              })
 	            )
 	          )
-	        ),
-	        _react2.default.createElement(_components.BoxFooter, null)
+	        )
 	      );
 	    }
 	  }]);
@@ -37486,7 +37487,7 @@
 	exports.default = SimpleListView;
 
 /***/ },
-/* 327 */
+/* 326 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37557,7 +37558,7 @@
 	}
 
 /***/ },
-/* 328 */
+/* 327 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37567,47 +37568,47 @@
 	});
 	exports.LinkBtn = exports.ActionBtn = exports.CRUDForm = exports.Form = exports.TableHead = exports.TableBody = exports.Table = exports.BoxFooter = exports.BoxBody = exports.BoxHeader = exports.Box = undefined;
 
-	var _Box2 = __webpack_require__(324);
+	var _Box2 = __webpack_require__(323);
 
 	var _Box3 = _interopRequireDefault(_Box2);
 
-	var _BoxHeader2 = __webpack_require__(329);
+	var _BoxHeader2 = __webpack_require__(328);
 
 	var _BoxHeader3 = _interopRequireDefault(_BoxHeader2);
 
-	var _BoxBody2 = __webpack_require__(325);
+	var _BoxBody2 = __webpack_require__(324);
 
 	var _BoxBody3 = _interopRequireDefault(_BoxBody2);
 
-	var _BoxFooter2 = __webpack_require__(330);
+	var _BoxFooter2 = __webpack_require__(329);
 
 	var _BoxFooter3 = _interopRequireDefault(_BoxFooter2);
 
-	var _Table2 = __webpack_require__(331);
+	var _Table2 = __webpack_require__(330);
 
 	var _Table3 = _interopRequireDefault(_Table2);
 
-	var _TableBody2 = __webpack_require__(332);
+	var _TableBody2 = __webpack_require__(331);
 
 	var _TableBody3 = _interopRequireDefault(_TableBody2);
 
-	var _TableHead2 = __webpack_require__(333);
+	var _TableHead2 = __webpack_require__(332);
 
 	var _TableHead3 = _interopRequireDefault(_TableHead2);
 
-	var _Form2 = __webpack_require__(334);
+	var _Form2 = __webpack_require__(333);
 
 	var _Form3 = _interopRequireDefault(_Form2);
 
-	var _CRUDForm2 = __webpack_require__(335);
+	var _CRUDForm2 = __webpack_require__(334);
 
 	var _CRUDForm3 = _interopRequireDefault(_CRUDForm2);
 
-	var _ActionBtn2 = __webpack_require__(336);
+	var _ActionBtn2 = __webpack_require__(335);
 
 	var _ActionBtn3 = _interopRequireDefault(_ActionBtn2);
 
-	var _LinkBtn2 = __webpack_require__(337);
+	var _LinkBtn2 = __webpack_require__(336);
 
 	var _LinkBtn3 = _interopRequireDefault(_LinkBtn2);
 
@@ -37626,7 +37627,7 @@
 	exports.LinkBtn = _LinkBtn3.default;
 
 /***/ },
-/* 329 */
+/* 328 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -37643,7 +37644,6 @@
 
 	var BoxHeader = function BoxHeader(_ref) {
 	  var children = _ref.children;
-
 	  return _react2.default.createElement(
 	    "div",
 	    { className: "box-header" },
@@ -37652,6 +37652,43 @@
 	};
 
 	exports.default = BoxHeader;
+
+
+	BoxHeader.propTypes = {
+	  children: _react.PropTypes.node
+	};
+
+/***/ },
+/* 329 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var BoxFooter = function BoxFooter(_ref) {
+	  var children = _ref.children;
+	  return _react2.default.createElement(
+	    "div",
+	    { className: "box-footer" },
+	    children
+	  );
+	};
+
+	exports.default = BoxFooter;
+
+
+	BoxFooter.propTypes = {
+	  children: _react.PropTypes.node
+	};
 
 /***/ },
 /* 330 */
@@ -37669,37 +37706,8 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var BoxFooter = function BoxFooter(_ref) {
-	  var children = _ref.children;
-
-	  return _react2.default.createElement(
-	    "div",
-	    { className: "box-footer" },
-	    children
-	  );
-	};
-
-	exports.default = BoxFooter;
-
-/***/ },
-/* 331 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 	var Table = function Table(_ref) {
 	  var children = _ref.children;
-
 	  return _react2.default.createElement(
 	    "table",
 	    { className: "table table-bordered table-hover", role: "grid" },
@@ -37709,8 +37717,13 @@
 
 	exports.default = Table;
 
+
+	Table.propTypes = {
+	  children: _react.PropTypes.node
+	};
+
 /***/ },
-/* 332 */
+/* 331 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37727,7 +37740,6 @@
 
 	var TableBody = function TableBody(_ref) {
 	  var children = _ref.children;
-
 	  return _react2.default.createElement(
 	    'tbody',
 	    null,
@@ -37737,8 +37749,13 @@
 
 	exports.default = TableBody;
 
+
+	TableBody.propTypes = {
+	  children: _react.PropTypes.node
+	};
+
 /***/ },
-/* 333 */
+/* 332 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -37754,9 +37771,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var TableHead = function TableHead(_ref) {
-	  var children = _ref.children;
 	  var tHead = _ref.tHead;
-
 	  return _react2.default.createElement(
 	    "thead",
 	    null,
@@ -37776,8 +37791,13 @@
 
 	exports.default = TableHead;
 
+
+	TableHead.propTypes = {
+	  tHead: _react.PropTypes.array.isRequired
+	};
+
 /***/ },
-/* 334 */
+/* 333 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37788,8 +37808,6 @@
 	exports.default = undefined;
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _class, _temp;
 
 	var _react = __webpack_require__(1);
 
@@ -37806,7 +37824,8 @@
 	var TYPE_TEXT = ['text', 'number'];
 	var TYPE_SELECT = 'select';
 	var TYPE_RADIO = 'radio';
-	var Form = (_temp = _class = function (_React$Component) {
+
+	var Form = function (_React$Component) {
 	  _inherits(Form, _React$Component);
 
 	  function Form() {
@@ -37873,14 +37892,18 @@
 	  }]);
 
 	  return Form;
-	}(_react2.default.Component), _class.propTypes = {
-	  fieldTypes: _react.PropTypes.object.isRequired,
-	  initialValues: _react.PropTypes.object
-	}, _temp);
+	}(_react2.default.Component);
+
 	exports.default = Form;
 
+
+	Form.propTypes = {
+	  fieldTypes: _react.PropTypes.object.isRequired,
+	  initialValues: _react.PropTypes.object
+	};
+
 /***/ },
-/* 335 */
+/* 334 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37892,13 +37915,11 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _class, _temp;
-
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _components = __webpack_require__(328);
+	var _components = __webpack_require__(327);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -37908,7 +37929,7 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var CRUDForm = (_temp = _class = function (_React$Component) {
+	var CRUDForm = function (_React$Component) {
 	  _inherits(CRUDForm, _React$Component);
 
 	  function CRUDForm() {
@@ -37928,7 +37949,6 @@
 	      var data = _props.data;
 	      var path = _props.path;
 	      var handleConfirm = _props.handleConfirm;
-	      var handleRemove = _props.handleRemove;
 
 
 	      return _react2.default.createElement(
@@ -37965,7 +37985,12 @@
 	  }]);
 
 	  return CRUDForm;
-	}(_react2.default.Component), _class.propTypes = {
+	}(_react2.default.Component);
+
+	exports.default = CRUDForm;
+
+
+	CRUDForm.propTypes = {
 	  loaded: _react.PropTypes.bool.isRequired,
 	  loading: _react.PropTypes.bool.isRequired,
 	  isNew: _react.PropTypes.bool.isRequired,
@@ -37974,11 +37999,10 @@
 	  fieldTypes: _react.PropTypes.object.isRequired,
 	  handleConfirm: _react.PropTypes.func,
 	  handleRemove: _react.PropTypes.func
-	}, _temp);
-	exports.default = CRUDForm;
+	};
 
 /***/ },
-/* 336 */
+/* 335 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37997,7 +38021,6 @@
 	  var children = _ref.children;
 	  var type = _ref.type;
 	  var onClick = _ref.onClick;
-
 	  return _react2.default.createElement(
 	    'button',
 	    { className: 'btn btn-' + type, onClick: onClick },
@@ -38007,8 +38030,15 @@
 
 	exports.default = ActionBtn;
 
+
+	ActionBtn.propTypes = {
+	  children: _react.PropTypes.node,
+	  type: _react.PropTypes.string.isRequired,
+	  onClick: _react.PropTypes.func.isRequired
+	};
+
 /***/ },
-/* 337 */
+/* 336 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -38029,7 +38059,6 @@
 	  var children = _ref.children;
 	  var type = _ref.type;
 	  var path = _ref.path;
-
 	  return _react2.default.createElement(
 	    _reactRouter.Link,
 	    { to: path },
@@ -38043,8 +38072,15 @@
 
 	exports.default = LinkBtn;
 
+
+	LinkBtn.propTypes = {
+	  children: _react.PropTypes.node,
+	  type: _react.PropTypes.string.isRequired,
+	  path: _react.PropTypes.string.isRequired
+	};
+
 /***/ },
-/* 338 */
+/* 337 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -38062,19 +38098,17 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(193);
-
 	var _reactRouterRedux = __webpack_require__(252);
 
 	var _reactRedux = __webpack_require__(167);
 
-	var _ContentView2 = __webpack_require__(320);
+	var _ContentView2 = __webpack_require__(319);
 
 	var _ContentView3 = _interopRequireDefault(_ContentView2);
 
-	var _item = __webpack_require__(327);
+	var _item = __webpack_require__(326);
 
-	var _components = __webpack_require__(328);
+	var _components = __webpack_require__(327);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -38186,12 +38220,14 @@
 	  }, {
 	    key: '_generateRandomHash',
 	    value: function _generateRandomHash(length) {
-	      var text = "";
-	      var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+	      var text = '';
+	      var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
 	      for (var i = 0; i < length; i++) {
 	        text += possible.charAt(Math.floor(Math.random() * possible.length));
-	      }return text;
+	      }
+
+	      return text;
 	    }
 	  }, {
 	    key: '_getValue',

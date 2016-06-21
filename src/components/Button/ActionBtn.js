@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
-let ActionBtn = ({ children, type, onClick }) => {
-  return (
-    <button className={`btn btn-${type}`} onClick={onClick}>
-      { children }
-    </button>
-    )
-}
+const ActionBtn = ({ children, type, onClick }) => (
+  <button className={`btn btn-${type}`} onClick={onClick}>
+    {children}
+  </button>
+);
 
 export default ActionBtn;
+
+ActionBtn.propTypes = {
+  children: PropTypes.node,
+  type: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired
+};

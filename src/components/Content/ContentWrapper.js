@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
-let ContentWrapper = ({children}) => {
-  return (
-    <div className="content-wrapper">
-      {children}
-    </div>
-    )
-}
+const ContentWrapper = ({ children }) => (
+  <div className="content-wrapper">
+    {children}
+  </div>
+);
 
 export default ContentWrapper;
+
+ContentWrapper.propTypes = {
+  children: PropTypes.node
+};

@@ -12,23 +12,23 @@ const initialState = {
 };
 
 export default function item(state = initialState, action = {}) {
-  switch(action.type) {
+  switch (action.type) {
     case LIST_ITEM:
       return {
         ...state,
         itemList: List(action.result)
-      }
+      };
     case GET_ITEM:
       return {
         ...state,
         loaded: true,
         item: Map(action.result)
-      }
+      };
     case REMOVE_ITEM:
       return {
         ...state,
         reload: true
-      }
+      };
     default:
       return initialState;
   }

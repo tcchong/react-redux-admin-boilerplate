@@ -1,7 +1,7 @@
 import { apiEndpoint } from '../../../config/env.config';
 
 export default function fetchMiddleware(fetch) {
-  return ({getState, dispatch}) => next => action => {
+  return ({ getState, dispatch }) => next => action => {
     if (typeof action === 'function') {
       return action(dispatch, getState);
     }
@@ -25,10 +25,10 @@ export default function fetchMiddleware(fetch) {
 
     next({ type: REQUEST, ...rest });
 
-    let fetchOptions = {
+    const fetchOptions = {
       method,
       headers: {
-        'Accept': 'application/json',
+        Accept: 'application/json',
         'Content-Type': 'application/json'
       }
     };
@@ -40,12 +40,12 @@ export default function fetchMiddleware(fetch) {
     return fetch(`${apiEndpoint}${url}`, fetchOptions)
             .then((response) => response.json())
             .then(
-              (result) => next({type: SUCCESS, result, ...rest}),
+              (result) => next({ type: SUCCESS, result, ...rest }),
               (error) => next({ type: FAILURE, error, ...rest })
             )
             .catch((error) => {
               console.log('middleware error', error);
-              next({ type: FAILURE, error, ...rest })
+              next({ type: FAILURE, error, ...rest });
             });
-  }
+  };
 }

@@ -21,7 +21,7 @@ export default class Home extends ContentView {
           </Box>
         </div>
       </div>
-      )
+      );
   }
 
 }

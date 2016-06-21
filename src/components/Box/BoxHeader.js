@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
-let BoxHeader = ({children}) => {
-  return(
-    <div className="box-header">
-      {children}
-    </div>
-    )
-}
+const BoxHeader = ({ children }) => (
+  <div className="box-header">
+    {children}
+  </div>
+);
 
 export default BoxHeader;
+
+BoxHeader.propTypes = {
+  children: PropTypes.node
+};

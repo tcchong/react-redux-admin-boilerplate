@@ -3,7 +3,6 @@ import AppHeaderContainer from 'components/AppHeaderContainer/AppHeaderContainer
 import AppLogo from 'components/AppLogo/AppLogo';
 import Navbar from 'components/Navbar/Navbar';
 import LeftSidebar from 'components/LeftSidebar/LeftSidebar';
-import Footer from 'components/Footer/Footer';
 
 let sidebarList = [
   {
@@ -21,6 +20,7 @@ let sidebarList = [
   }
 ];
 
+// eslint-disable-next-line react/prefer-stateless-function
 export default class App extends React.Component {
 
   render() {
@@ -37,6 +37,6 @@ export default class App extends React.Component {
 
         <div className="control-sidebar-bg"></div>
       </div>
-      )
+      );
   }
 }

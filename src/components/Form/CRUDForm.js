@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react';
 import {
   Box,
-  BoxHeader,
   BoxBody,
   BoxFooter,
   Form,
@@ -10,18 +9,6 @@ import {
 } from 'components';
 
 export default class CRUDForm extends React.Component {
-
-  static propTypes = {
-    loaded: PropTypes.bool.isRequired,
-    loading: PropTypes.bool.isRequired,
-    isNew: PropTypes.bool.isRequired,
-    data: PropTypes.object.isRequired,
-    path: PropTypes.string.isRequired,
-    fieldTypes: PropTypes.object.isRequired,
-    handleConfirm: PropTypes.func,
-    handleRemove: PropTypes.func
-  }
-
   render() {
     const {
       isNew,
@@ -30,8 +17,7 @@ export default class CRUDForm extends React.Component {
       fieldTypes,
       data,
       path,
-      handleConfirm,
-      handleRemove
+      handleConfirm
     } = this.props;
 
     return (
@@ -61,6 +47,17 @@ export default class CRUDForm extends React.Component {
           </ActionBtn>
         </BoxFooter>
       </Box>
-    )
+    );
   }
 }
+
+CRUDForm.propTypes = {
+  loaded: PropTypes.bool.isRequired,
+  loading: PropTypes.bool.isRequired,
+  isNew: PropTypes.bool.isRequired,
+  data: PropTypes.object.isRequired,
+  path: PropTypes.string.isRequired,
+  fieldTypes: PropTypes.object.isRequired,
+  handleConfirm: PropTypes.func,
+  handleRemove: PropTypes.func
+};
